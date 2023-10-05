@@ -5,10 +5,17 @@ import ReactDOM from "react-dom/client";
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(heading);
 
-//JSX
+//JSX = React element
 const jsxHeading = <h1 id="heading">Namste React from JSX</h1>;
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(jsxHeading);
+
+//React Functional Component
+const HeadingComponent = () => {
+  <div id="container">
+    <h2>Hi from Functional Component</h2>
+  </div>;
+};
 
 // //Nested Html structure
 

@@ -34,7 +34,9 @@ const HeadingComponent = () => (
   <div id="container">
     <h2>{100 + number}</h2>
     {jsxHeading}
+    {Title()}
     <Title />
+    <Title></Title>
     <Subtitle />
     <h2>Hi from Functional Component</h2>
   </div>

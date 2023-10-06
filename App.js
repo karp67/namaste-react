@@ -7,15 +7,40 @@ import ReactDOM from "react-dom/client";
 
 //JSX = React element
 const jsxHeading = <h1 id="heading">Namste React from JSX</h1>;
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(jsxHeading);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(jsxHeading);
 
 //React Functional Component
-const HeadingComponent = () => {
-  <div id="container">
-    <h2>Hi from Functional Component</h2>
-  </div>;
+
+const Title = function () {
+  return (
+    <h1 className="head" tabIndex="5">
+      Namaste React
+    </h1>
+  );
 };
+
+const Subtitle = () => {
+  return (
+    <div>
+      <h2>React is great!!</h2>
+    </div>
+  );
+};
+
+const number = 10000;
+//Component Composition
+const HeadingComponent = () => (
+  <div id="container">
+    <h2>{100 + number}</h2>
+    {jsxHeading}
+    <Title />
+    <Subtitle />
+    <h2>Hi from Functional Component</h2>
+  </div>
+);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent />);
 
 // //Nested Html structure
 
